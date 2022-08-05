@@ -1,16 +1,27 @@
 version: "3.8"
 
 services:
+    react:
+        depends_on:
+            - server
+        restart: unless-stopped
+        build: ./client
+        ports:
+            - 80:8080
+        networks:
+            - server
+
     server:
         depends_on:
             - db
         restart: unless-stopped
         build: ./server
         ports:
-            - 8080:8080
+            - 3001
         environment:
             # site
             DB_URL: "mongodb://db:27017/ExerciseDB"
+            PORT: 3001
         networks:
             - server
 
