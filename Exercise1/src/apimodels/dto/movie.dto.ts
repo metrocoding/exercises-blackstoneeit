@@ -1,5 +1,6 @@
 import { Expose } from "class-transformer";
-import { IsDefined, IsNumber, IsNumberString } from "class-validator";
+import { IsDefined, IsNumber } from "class-validator";
+import { IsObjectId } from "class-validator-mongo-object-id";
 
 export class CreateMovieDto {
     @IsDefined()
@@ -19,13 +20,13 @@ export class CreateMovieDto {
 export class UpdateMovieDto extends CreateMovieDto {
     @IsDefined()
     @Expose()
-    @IsNumberString()
+    @IsObjectId({ message: "invalid objectId" })
     id: number;
 }
 
 export class IdDto {
     @IsDefined()
     @Expose()
-    @IsNumberString()
+    @IsObjectId({ message: "invalid objectId" })
     id: number;
 }

@@ -82,7 +82,7 @@ export const MovieController = {
             .status(200)
             .send(
                 new ApiResponseResult<IMovie>(true, movie, [
-                    new ResponseMessage(ResponseMessageType.SUCCESS, "movie updated successfully"),
+                    new ResponseMessage(ResponseMessageType.SUCCESS, "movie fetched successfully"),
                 ])
             );
     },
@@ -93,7 +93,7 @@ export const MovieController = {
             .status(200)
             .send(
                 new ApiResponseResult<IMovie[]>(true, movies, [
-                    new ResponseMessage(ResponseMessageType.SUCCESS, "movie updated successfully"),
+                    new ResponseMessage(ResponseMessageType.SUCCESS, "movies fetched successfully"),
                 ])
             );
     },

@@ -41,10 +41,10 @@ router.delete(
     requestValidatorMiddleware(IdDto, RequestType.PARAMS),
     asyncMiddleware(MovieController.deleteProduct)
 );
-router.get("/:id", requestValidatorMiddleware(IdDto, RequestType.PARAMS), asyncMiddleware(MovieController.getProduct));
 router.get("/all", asyncMiddleware(MovieController.getAllProducts));
+router.get("/:id", requestValidatorMiddleware(IdDto, RequestType.PARAMS), asyncMiddleware(MovieController.getProduct));
 
-app.use("/api/product", router);
+app.use("/api/movie", router);
 
 // error handler
 app.all("*", async (req) => {
