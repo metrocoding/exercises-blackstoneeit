@@ -3,6 +3,7 @@ To run Exercise 1 from root directory run this command:
 ```
 $ cd Exercise1 && docker-compose up
 ```
+then visit [localhost:8080](http://localhost:8080)
 
 To run second Exercise 2 cd to root directory and run:
 ```
