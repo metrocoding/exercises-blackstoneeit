@@ -9,6 +9,8 @@ To run second Exercise 2 cd to root directory and run:
 ```
 $ cd Exercise2 && npm i && npm start
 ```
+it takes sample.csv from src directory and generate two file based on description in PDF into same directory
+
 Exercise 2 test:
 ```
 $ cd Exercise2 && npm run test
